@@ -1,0 +1,16 @@
+name: Daily API Monitor
+
+on:
+  schedule:
+    - cron: '50 1 * * 1-5' # 02:00 AM UTC = 09:00 AM GMT+7
+  workflow_dispatch: # Allows manual run too
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Make API Request puppeteer bersiap
+        run: curl -s -w "%{http_code}" -o /dev/null https://puppeteer-render-zx37.onrender.com/bersiap
+      - name: Make API Request for n8n
+        run: curl -s -w "%{http_code}" -o /dev/null https://ajaib-automation.onrender.com/
+
