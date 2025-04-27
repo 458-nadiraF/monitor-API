@@ -2,7 +2,7 @@ name: Daily API Monitor
 
 on:
   schedule:
-    - cron: '0 2 * * *' # 02:00 AM UTC = 09:00 AM GMT+7
+    - cron: '0 1 * * *' # 02:00 AM UTC = 09:00 AM GMT+7
   workflow_dispatch: # Allows manual run too
 
 jobs:
@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Make API Request
-        run: curl -s -w "%{http_code}" -o /dev/null https://your-api.com/endpoint
+        run: curl -s -w "%{http_code}" -o /dev/null https://api.telegram.org/bot7913623711:AAEhWbLT9NxDpWg5LM9Ue74uBwVjqb22mrA/sendMessage?chat_id=-4649312508&text=Hello%20fromgit
