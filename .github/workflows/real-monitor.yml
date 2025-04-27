@@ -1,4 +1,4 @@
-name: Daily API Monitor
+name: Daily Real API Monitor
 
 on:
   schedule:
