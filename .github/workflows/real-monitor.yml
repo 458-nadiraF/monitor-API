@@ -2,7 +2,7 @@ name: Daily Real API Monitor
 
 on:
   schedule:
-    - cron: '50 1 * * 1-5' # 02:00 AM UTC = 09:00 AM GMT+7
+    - cron: '35 1 * * 1-5' # 02:00 AM UTC = 09:00 AM GMT+7
   workflow_dispatch: # Allows manual run too
 
 jobs:
