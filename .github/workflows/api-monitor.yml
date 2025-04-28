@@ -2,7 +2,7 @@ name: Daily API Monitor
 
 on:
   schedule:
-    - cron: "*/2 * * * *" # 02:00 AM UTC = 09:00 AM GMT+7
+    - cron: "*/5 * * * *" # 02:00 AM UTC = 09:00 AM GMT+7
   workflow_dispatch: # Allows manual run too
 
 jobs:
